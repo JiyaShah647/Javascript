@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To-Do App</title>
+    </head>
+    <style>
+        button{background-color: #85e2e9;}
+        input{background-color: rgb(188, 151, 223);}
+
+    </style>
+    <body>
+        <div class="container">
+            <h1>To-do List App</h1>
+            <div>
+            <input type="text" class="todo-input" placeholder="Add a task...">
+            <button onclick="addTodo()" class="add-btn">+</button>
+
+            </div>
+            <ul class="todo-list"></ul>
+        </div>
+        <script>
+            const inp_box=document.querySelector(".todo-input");
+            const addBtn=document.querySelector(".add-btn");
+            const todo_list=document.querySelector(".todo-list")
+            function addTodo()
+            {
+                const todo_text=inp_box.value;
+                const todo=document.createElement('li')
+                todo.textContent=todo_text;
+                const delBtn=document.createElement('button');
+                const editBtn=document.createElement('button');
+                delBtn.textContent= "Delete";
+                editBtn.textContent="Edit";
+                delBtn.onclick=function()
+                {
+                    this.parentElement.remove()
+                }
+                editBtn.onclick=function()
+                {
+                    const new_todo_text= prompt("Enter Value:",this.parentElement.textContent.slice(0,-10));
+                    console.log(new_todo_text);
+                    this.parentElement.textContent=new_todo_text;
+                    todo.appendChild(delBtn);
+                    todo.appendChild(editBtn);
+                }
+                todo.appendChild(delBtn);
+                todo.appendChild(editBtn);
+                todo_list.appendChild(todo);
+            }
+        </script>
+    </body>
+</html>
