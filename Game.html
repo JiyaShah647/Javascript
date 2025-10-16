@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Number Guessing Game</title>
+        <style>
+            button{
+                background-color: rgb(226, 226, 28);
+
+            }
+            input{
+                background-color: rgb(203, 159, 245);
+            }
+            body{
+                background-color: rgb(116, 238, 197);
+            }
+            #game
+            {
+                background-color:#fff; 
+                border-radius: 5px; 
+                padding: 20px; 
+                max-width: 400px;
+                margin: 20px auto; 
+                box-shadow: 0 0 10px Drgba(0, 0, 0, 0.1)
+            }
+            h1
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="game">
+            <form>
+                <h1>Number Guessing Game</h1>
+                <label for="text"><h2>Enter a random number from 1-10:</h2></label>
+                <input type="textbox" placeholder="Enter a number" id="user-input"><br><br>
+                <button type="button" onclick="boxPrint()">Submit</button>
+                <button type="button" onclick="newGame()">New game</button>
+                <p id="display"><b>Result:</b></p>
+            </form>
+        </div>
+
+    <script>
+        console.log("Hello Javascript")
+        var n=Math.floor(Math.random()*10)+1
+        var count=0
+        var userInput=document.getElementById("user-input")
+        var display=document.getElementById("display")
+        function boxPrint()
+        {
+            console.log(userInput.value)
+            count++
+            if(userInput.value<n)
+            {
+                display.innerText="Result: Too Small"
+            }
+            if(userInput.value>n)
+            {
+                display.innerText="Result: Too Big"
+            }
+            if(userInput.value==n-1 || userInput.value==n+1)
+            {
+                display.innerText="Result: You are too near to the number."
+            }
+            if(userInput.value==n)
+            {
+                display.innerText="Result: You guessed correctly in " + count + " turns!!"
+            }
+            if(userInput.value<0 || userInput.value>10)
+            {
+                display.innerText="Invalid Input"
+            }
+            if(isNaN(userInput.value))
+            {
+                display.innerText="Invalid Input"
+            }
+        }
+        function newGame() 
+        {
+            n = Math.floor(Math.random()*10) + 1;
+            count = 0;
+            display.innerText = "Result:";
+            userInput.value = "";
+        }
+    </script>
+    </body>
+</html>
