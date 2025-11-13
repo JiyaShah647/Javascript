@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+}
+
+.clock-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 60px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+#clock {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#ampm {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffcc00;
+  text-transform: uppercase;
+}
+
+#date {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #a7c7e7;
+  margin-bottom: 20px;
+}
+
+#toggle-format {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#toggle-format:hover {
+  background: #ffe066;
+  transform: scale(1.05);
+}
