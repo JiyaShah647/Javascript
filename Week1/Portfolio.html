@@ -1,1 +1,88 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Jiya Shah</h1>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Hello, I'm <span>Jiya Shah</span></h2>
+          <p>A passionate web developer building modern and responsive websites with clean design and smooth UI.</p>
+          <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+        </div>
+        <div class="hero-image">
+          <img src="C:\Users\acer\Pictures\anime girl.avif" alt="Profile Photo" class="profile-photo">
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I am a front-end developer who enjoys creating beautiful, responsive, and user-friendly websites.
+        I love learning new technologies and transforming ideas into real projects.
+      </p>
+    </section>
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800" alt="">
+          <h3>Notes App</h3>
+          <p>A clean and simple notes-taking web application with add, edit, and delete features.</p><br>
+          <a href="NotesApp.html" class="btn" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800" alt="">
+          <h3>Student Grade Tracker</h3>
+          <p>An interactive web app to manage student grades and calculate average marks.</p><br>
+          <a href="StudentGradeTracker.html" class="btn" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800" alt="">
+          <h3>Product Card UI</h3>
+          <p>Clean and modern product card UI built using HTML, CSS, and JS animations.</p><br>
+          <a href="Product.html" class="btn" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+    <footer>
+      © 2025 Jiya Shah | All Rights Reserved
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
