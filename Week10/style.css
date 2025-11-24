@@ -1,0 +1,45 @@
+      body {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        color: #fff;
+      }
+
+      .weather-container {
+        background: rgba(255,255,255,0.1);
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        width: 300px;
+      }
+
+      input, button {
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      input {
+        width: 80%;
+      }
+
+      button {
+        width: 85%;
+        background-color: #00c9a7;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #00a384;
+      }
+
+      .result {
+        margin-top: 20px;
+      }
